@@ -97,39 +97,39 @@ export const styles = StyleSheet.create({
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
-      },
-    
-      loginInput: {
+    },
+
+    loginInput: {
         backgroundColor: "#FFEBEE",
         borderRadius: 30,
         width: "70%",
         height: 50,
         marginBottom: 20,
-      },
-    
-      TextInput: {
+    },
+
+    TextInput: {
         height: 50,
         flex: 1,
         padding: 10,
         marginLeft: 20,
-      },
-    
-      forgot_button: {
+    },
+
+    forgot_button: {
         height: 30,
         marginBottom: 30,
-      },
-    
-      loginText: {
+    },
+
+    loginText: {
         color: "white",
         fontWeight: "bold"
-      },
-    
-      loginBtn: {
+    },
+
+    loginBtn: {
         width: "70%",
         borderRadius: 25,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: COLORS.primary,
-      }
+    }
 })

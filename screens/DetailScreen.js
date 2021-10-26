@@ -1,7 +1,7 @@
 import React from 'react'
-import { ImageBackground, View, StatusBar, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { ImageBackground, View, StatusBar, Text, TouchableOpacity } from 'react-native'
 import { styles } from '../styles/styles'
-import { FontAwesome, FontAwesome5, Ionicons } from '@expo/vector-icons';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import COLORS from '../consts/colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 

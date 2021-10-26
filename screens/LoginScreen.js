@@ -9,7 +9,6 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
-import COLORS from "../consts/colors";
 import * as Animatable from 'react-native-animatable';
 import { styles } from "../styles/styles";
 
