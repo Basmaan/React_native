@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, ImageBackground, View, StatusBar, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { ImageBackground, View, StatusBar, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { styles } from '../styles/styles'
 import { FontAwesome, FontAwesome5, Ionicons } from '@expo/vector-icons';
 import COLORS from '../consts/colors';
@@ -14,7 +14,7 @@ function DetailScreen({ navigation }) {
                 translucent={true}
                 backgroundColor="transparent"
             />
-            <ImageBackground source={{ uri: 'https://www.swissotel.com/assets/0/92/3686/3768/3770/6442451433/ae87da19-9f23-450a-8927-6f4c700aa104.jpg' }} style={style.headerImage}>
+            <ImageBackground source={{ uri: 'https://www.swissotel.com/assets/0/92/3686/3768/3770/6442451433/ae87da19-9f23-450a-8927-6f4c700aa104.jpg' }} style={styles.headerImage}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, paddingLeft: 20, paddingRight: 20 }}>
                     <View>
                         <Ionicons name="chevron-back" size={28} color={COLORS.white} onPress={navigation.goBack} />
@@ -25,7 +25,7 @@ function DetailScreen({ navigation }) {
                 </View>
             </ImageBackground>
             <View>
-                <View style={style.iconContainer}>
+                <View style={styles.iconContainer}>
                     <Icon name="place" color={COLORS.white} size={28} />
                 </View>
                 <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
@@ -76,7 +76,7 @@ function DetailScreen({ navigation }) {
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
                         Price per night
                     </Text>
-                    <View style={style.priceTag}>
+                    <View style={styles.price}>
                         <Text
                             style={{
                                 fontSize: 20,
@@ -98,7 +98,7 @@ function DetailScreen({ navigation }) {
                     </View>
                 </View>
                 <TouchableOpacity onPress={() => navigation.navigate('ImageScreen')}>
-                    <View style={style.btn}>
+                    <View style={styles.bookNowbtn}>
                         <Text style={{ color: COLORS.white, fontSize: 18, fontWeight: 'bold' }}>
                             Book Now
                         </Text>
@@ -110,51 +110,3 @@ function DetailScreen({ navigation }) {
 }
 
 export default DetailScreen
-
-const style = StyleSheet.create({
-    btn: {
-        height: 55,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 40,
-        backgroundColor: COLORS.primary,
-        marginHorizontal: 20,
-        borderRadius: 10,
-    },
-
-    priceTag: {
-        height: 50,
-        alignItems: 'center',
-        marginLeft: 40,
-        paddingLeft: 20,
-        flex: 1,
-        backgroundColor: COLORS.secondary,
-        borderTopLeftRadius: 20,
-        borderBottomLeftRadius: 20,
-        flexDirection: 'row',
-    },
-    iconContainer: {
-        position: 'absolute',
-        height: 60,
-        width: 60,
-        backgroundColor: COLORS.primary,
-        top: -30,
-        right: 40,
-        borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    headerImage: {
-        height: 400,
-        borderBottomRightRadius: 40,
-        borderBottomLeftRadius: 40,
-        overflow: 'hidden',
-    },
-    header: {
-        marginTop: 60,
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginHorizontal: 20,
-        justifyContent: 'space-between',
-    },
-});

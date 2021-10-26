@@ -1,6 +1,6 @@
 import React from 'react'
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import COLORS from '../consts/colors'
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { styles } from '../styles/styles'
 import Header from './Components/Header'
 import Hotel from './Components/Hotel'
 import Input from './Components/Input'
@@ -24,26 +24,3 @@ function HomeScreen({ navigation }) {
 
 export default HomeScreen
 
-
-const styles = StyleSheet.create({
-
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-  
-    loginText: {
-      color: "white",
-      fontWeight: "bold"
-    },
-   
-    loginBtn: {
-      width: "50%",
-      borderRadius: 25,
-      height: 50,
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: COLORS.primary,
-    },
-  });

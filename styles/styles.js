@@ -54,4 +54,82 @@ export const styles = StyleSheet.create({
         borderTopRightRadius: 10,
         borderTopLeftRadius: 10,
     },
+    bookNowbtn: {
+        height: 55,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 40,
+        backgroundColor: COLORS.primary,
+        marginHorizontal: 20,
+        borderRadius: 10,
+    },
+
+    price: {
+        height: 50,
+        alignItems: 'center',
+        marginLeft: 40,
+        paddingLeft: 20,
+        flex: 1,
+        backgroundColor: COLORS.secondary,
+        borderTopLeftRadius: 20,
+        borderBottomLeftRadius: 20,
+        flexDirection: 'row',
+    },
+    iconContainer: {
+        position: 'absolute',
+        height: 60,
+        width: 60,
+        backgroundColor: COLORS.primary,
+        top: -30,
+        right: 40,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    headerImage: {
+        height: 400,
+        borderBottomRightRadius: 40,
+        borderBottomLeftRadius: 40,
+        overflow: 'hidden',
+    },
+    loginContainer: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+      },
+    
+      loginInput: {
+        backgroundColor: "#FFEBEE",
+        borderRadius: 30,
+        width: "70%",
+        height: 50,
+        marginBottom: 20,
+      },
+    
+      TextInput: {
+        height: 50,
+        flex: 1,
+        padding: 10,
+        marginLeft: 20,
+      },
+    
+      forgot_button: {
+        height: 30,
+        marginBottom: 30,
+      },
+    
+      loginText: {
+        color: "white",
+        fontWeight: "bold"
+      },
+    
+      loginBtn: {
+        width: "70%",
+        borderRadius: 25,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: COLORS.primary,
+      }
 })
