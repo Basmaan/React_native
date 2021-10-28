@@ -20,7 +20,7 @@ function HotelCard({ hotels, navigation }) {
             <View style={styles.cardDetail}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View>
-                        <Text style={{ fontWeight: 'bold', fontSize: 17 }}>{hotels.name}</Text>
+                        <Text style={{ fontSize: 17,fontFamily:"Nunito_800ExtraBold" }}>{hotels.name}</Text>
                         <Text style={{ fontSize: 12, color: COLORS.grey }}>{hotels.location}</Text>
                     </View>
                     <View>

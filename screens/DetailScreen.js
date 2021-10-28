@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { ImageBackground, View, StatusBar, Text, TouchableOpacity } from 'react-native'
 import { styles } from '../styles/styles'
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import COLORS from '../consts/colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Modalize } from 'react-native-modalize';
 
 
 function DetailScreen({ navigation }) {
+    const modalizeRef = useRef(null);
+
+    const onOpen = () => {
+        modalizeRef.current?.open();
+    };
+
     return (
         <View>
-            <StatusBar
-                barStyle="light-content"
-                translucent={true}
-                backgroundColor="transparent"
-            />
             <ImageBackground source={{ uri: 'https://www.swissotel.com/assets/0/92/3686/3768/3770/6442451433/ae87da19-9f23-450a-8927-6f4c700aa104.jpg' }} style={styles.headerImage}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, paddingLeft: 20, paddingRight: 20 }}>
                     <View>
@@ -67,7 +69,8 @@ function DetailScreen({ navigation }) {
                 </View>
                 <View
                     style={{
-                        marginTop: 20,
+                        marginTop: 10,
+                        marginBottom: 15,
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         paddingLeft: 20,
@@ -97,13 +100,14 @@ function DetailScreen({ navigation }) {
                         </Text>
                     </View>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('ImageScreen')}>
+                <TouchableOpacity onPress={onOpen}>
                     <View style={styles.bookNowbtn}>
                         <Text style={{ color: COLORS.white, fontSize: 18, fontWeight: 'bold' }}>
                             Book Now
                         </Text>
                     </View>
                 </TouchableOpacity>
+                <Modalize ref={modalizeRef} modalHeight={1000}><Text>...your content</Text></Modalize>
             </View>
         </View>
     )

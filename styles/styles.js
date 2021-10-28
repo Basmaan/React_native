@@ -58,7 +58,6 @@ export const styles = StyleSheet.create({
         height: 55,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 40,
         backgroundColor: COLORS.primary,
         marginHorizontal: 20,
         borderRadius: 10,
@@ -117,11 +116,12 @@ export const styles = StyleSheet.create({
     forgot_button: {
         height: 30,
         marginBottom: 30,
+        fontFamily:"Nunito_800ExtraBold"
     },
 
     loginText: {
         color: "white",
-        fontWeight: "bold"
+        fontFamily: "Nunito_800ExtraBold",
     },
 
     loginBtn: {
