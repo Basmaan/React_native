@@ -6,6 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import COLORS from './consts/colors';
 import DetailScreen from './screens/DetailScreen';
 import ImageScreen from './screens/ImageScreen';
+import BookNowScreen from './screens/BookNowScreen';
 import { Nunito_400Regular, Nunito_800ExtraBold, Nunito_600SemiBold } from '@expo-google-fonts/nunito';
 import { Satisfy_400Regular } from '@expo-google-fonts/satisfy';
 import { Baskervville_400Regular_Italic } from '@expo-google-fonts/baskervville';
@@ -47,6 +48,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ImageScreen" component={ImageScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="BookNowScreen" component={BookNowScreen} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
