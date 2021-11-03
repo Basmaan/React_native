@@ -3,10 +3,10 @@ import React from 'react'
 import { View } from 'react-native-animatable'
 import AminitiesSection from './Components/AminitiesSection'
 
-function BookNowScreen() {
+function BookNowScreen({navigation}) {
     return (
         <View>
-           <AminitiesSection/>
+           <AminitiesSection navigation={navigation}/>
         </View>
     )
 }

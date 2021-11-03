@@ -13,6 +13,7 @@ import { Baskervville_400Regular_Italic } from '@expo-google-fonts/baskervville'
 import { Audiowide_400Regular } from '@expo-google-fonts/audiowide';
 import AppLoading from 'expo-app-loading';
 import * as Font from "expo-font";
+import GlassmorphismScreen from './screens/GlassmorphismScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ const getFonts = () =>
     Baskervville_400Regular_Italic,
     Satisfy_400Regular,
     Audiowide_400Regular,
+    shrikhand: require("./assets/fonts/Shrikhand-Regular.ttf"),
     nunito: require("./assets/fonts/Nunito-Regular.ttf")
   });
 
@@ -45,10 +47,11 @@ export default function App() {
             component={LoginScreen}
             options={{ title: '', headerShown: false }}
           />
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ImageScreen" component={ImageScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="BookNowScreen" component={BookNowScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="GlassmorphismScreen" component={GlassmorphismScreen} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
