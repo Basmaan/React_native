@@ -14,6 +14,7 @@ import { Audiowide_400Regular } from '@expo-google-fonts/audiowide';
 import AppLoading from 'expo-app-loading';
 import * as Font from "expo-font";
 import GlassmorphismScreen from './screens/GlassmorphismScreen';
+import TaskListScreen from './screens/TaskListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,7 @@ export default function App() {
           <Stack.Screen name="ImageScreen" component={ImageScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="BookNowScreen" component={BookNowScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="GlassmorphismScreen" component={GlassmorphismScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="TaskListScreen" component={TaskListScreen} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

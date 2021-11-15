@@ -13,7 +13,7 @@ function HomeScreen({ navigation }) {
                 <Hotel />
                 <View>
                     <TouchableOpacity onPress={() => navigation.navigate('DetailScreen')}>
-                        <Text style={{ fontWeight: 'bold' }}>Details</Text>
+                        <Text style={{fontWeight: 'bold',marginHorizontal:30 }}>Details</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

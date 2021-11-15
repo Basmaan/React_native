@@ -1,8 +1,6 @@
 
-import { BlurView } from 'expo-blur'
 import React from 'react'
-import { Image, ImageBackground, Text, View } from 'react-native'
-import COLORS from '../consts/colors'
+import {ImageBackground, Text, View } from 'react-native'
 
 function GlassmorphismScreen() {
 

@@ -60,6 +60,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: COLORS.primary,
         marginHorizontal: 20,
+        marginTop: 15,
         borderRadius: 10,
     },
 
