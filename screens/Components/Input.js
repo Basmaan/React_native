@@ -6,7 +6,7 @@ import COLORS from '../../consts/colors'
 function Input() {
     return (
         <View style={styles.inputContainer}>
-            <Feather name="search" size={30} style={{ marginLeft: 20 }} />
+            <Feather name="search" size={24} style={{ marginLeft: 20 }} />
             <TextInput
                 placeholder="Search"
                 style={{ fontSize: 20, paddingLeft: 10 }}
@@ -20,7 +20,7 @@ export default Input
 const styles = StyleSheet.create({
     inputContainer: {
         height: 50,
-        marginTop: 30,
+        marginTop: 10,
         backgroundColor: COLORS.light,
         flexDirection: 'row',
         marginLeft: 20,

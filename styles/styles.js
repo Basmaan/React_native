@@ -61,6 +61,7 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.primary,
         marginHorizontal: 20,
         marginTop: 15,
+        marginBottom: 15,
         borderRadius: 10,
     },
 
@@ -87,7 +88,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     headerImage: {
-        height: 400,
+        height: 380,
         borderBottomRightRadius: 40,
         borderBottomLeftRadius: 40,
         overflow: 'hidden',

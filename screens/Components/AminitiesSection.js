@@ -49,22 +49,24 @@ function AminitiesSection({ navigation }) {
                 />
             </View>
             <Text style={{ fontSize: 20, fontFamily: "Nunito_800ExtraBold", marginBottom: 10, marginTop: 15 }}>Screens</Text>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center',flexWrap:'wrap' }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap' }}>
                 <TouchableOpacity onPress={() => navigation.navigate('TaskListScreen')}>
                     <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15 }}>
                         <View style={{ paddingBottom: 5 }}>
-                        <FontAwesome name="tasks" size={24} color={COLORS.primary} />
+                            <FontAwesome name="tasks" size={24} color={COLORS.primary} />
                         </View>
                         <Text style={{ fontFamily: 'nunito' }}>TO DO APP</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('JobSearchScreen')}>
                     <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15 }}>
-                        <Text>QUIZ APP</Text>
+                        <View style={{ paddingBottom: 5 }}>
+                            <FontAwesome name="briefcase" size={24} color={COLORS.primary} />
+                        </View>
+                        <Text>JOB APP</Text>
                     </View>
                 </TouchableOpacity>
             </View>
-
         </View>
     )
 }
