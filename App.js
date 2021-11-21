@@ -16,6 +16,7 @@ import * as Font from "expo-font";
 import GlassmorphismScreen from './screens/GlassmorphismScreen';
 import TaskListScreen from './screens/TaskListScreen';
 import JobSearchScreen from './screens/JobSearchScreen';
+import OnboardingScreen from './screens/OnboardingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,10 +45,9 @@ export default function App() {
     return (
       <NavigationContainer theme={Mytheme}>
         <Stack.Navigator>
-          <Stack.Screen
-            name="Login"
-            component={LoginScreen}
-            options={{ title: '', headerShown: false }}
+          <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} options={{ title: '', headerShown: false }}
+          />
+          <Stack.Screen name="Login" component={LoginScreen} options={{ title: '', headerShown: false }}
           />
           <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} options={{ title: '', headerShown: false }} />
