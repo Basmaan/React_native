@@ -3,7 +3,7 @@ import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import RadioForm from 'react-native-simple-radio-button';
 import aminities from '../../consts/aminities';
 import COLORS from '../../consts/colors';
-import { FontAwesome, Octicons } from '@expo/vector-icons';
+import { Entypo, FontAwesome, MaterialCommunityIcons, Octicons } from '@expo/vector-icons';
 
 
 var radio_props = [
@@ -49,9 +49,9 @@ function AminitiesSection({ navigation }) {
                 />
             </View>
             <Text style={{ fontSize: 20, fontFamily: "Nunito_800ExtraBold", marginBottom: 10, marginTop: 15 }}>Screens</Text>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap' }}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                 <TouchableOpacity onPress={() => navigation.navigate('TaskListScreen')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15 }}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
                         <View style={{ paddingBottom: 5 }}>
                             <FontAwesome name="tasks" size={24} color={COLORS.primary} />
                         </View>
@@ -59,11 +59,19 @@ function AminitiesSection({ navigation }) {
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('JobSearchScreen')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15 }}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
                         <View style={{ paddingBottom: 5 }}>
                             <FontAwesome name="briefcase" size={24} color={COLORS.primary} />
                         </View>
                         <Text>JOB APP</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('ProfileScreen')}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                        <View style={{ paddingBottom: 5 }}>
+                            <Entypo name="user" size={24} color={COLORS.primary} />
+                        </View>
+                        <Text>PROFILE</Text>
                     </View>
                 </TouchableOpacity>
             </View>

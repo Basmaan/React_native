@@ -17,6 +17,8 @@ import GlassmorphismScreen from './screens/GlassmorphismScreen';
 import TaskListScreen from './screens/TaskListScreen';
 import JobSearchScreen from './screens/JobSearchScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ProfileDetailScreen from './screens/ProfileDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +58,8 @@ export default function App() {
           <Stack.Screen name="GlassmorphismScreen" component={GlassmorphismScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="TaskListScreen" component={TaskListScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="JobSearchScreen" component={JobSearchScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="ProfileDetailScreen" component={ProfileDetailScreen} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
