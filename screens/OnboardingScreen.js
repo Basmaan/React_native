@@ -40,7 +40,7 @@ export default function OnboardingScreen({ navigation }) {
     // }
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1}}>
             <Onboarding
                 DotComponent={DotButton}
                 onDone={() => navigation.navigate('Login')}
