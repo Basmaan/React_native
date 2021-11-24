@@ -78,7 +78,7 @@ const JobSearchScreen = () => {
       >
         {popular.map((title, index) => {
           return (
-            <View key={index} style={{ backgroundColor: "#fff", height: 260, width: 150, borderTopLeftRadius: 20, borderBottomRightRadius: 20, marginRight: 15 }}>
+            <View key={index} style={{ backgroundColor: "#fff", height: 330, width: 150, borderTopLeftRadius: 20, borderBottomRightRadius: 20, marginRight: 15 }}>
               <Image source={title.img} style={{ width: 150, height: 150 }} />
               <View style={{ backgroundColor: "#000000", height: 50, borderBottomRightRadius: 20, paddingHorizontal: 15, paddingVertical: 5 }}>
                 <Text style={{ color: "#fff", fontSize: 13, fontFamily: 'Nunito_800ExtraBold', textTransform: 'uppercase' }}>{title.roles}</Text>

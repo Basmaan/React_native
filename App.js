@@ -19,6 +19,7 @@ import JobSearchScreen from './screens/JobSearchScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ProfileDetailScreen from './screens/ProfileDetailScreen';
+import Dropdown from './screens/Components/Dropdown';
 
 const Stack = createNativeStackNavigator();
 
@@ -60,6 +61,7 @@ export default function App() {
           <Stack.Screen name="JobSearchScreen" component={JobSearchScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ProfileDetailScreen" component={ProfileDetailScreen} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="Dropdown" component={Dropdown} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -3,7 +3,7 @@ import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import RadioForm from 'react-native-simple-radio-button';
 import aminities from '../../consts/aminities';
 import COLORS from '../../consts/colors';
-import { Entypo, FontAwesome, MaterialCommunityIcons, Octicons } from '@expo/vector-icons';
+import { AntDesign, Entypo, FontAwesome, MaterialCommunityIcons, Octicons } from '@expo/vector-icons';
 
 
 var radio_props = [
@@ -74,10 +74,17 @@ function AminitiesSection({ navigation }) {
                         <Text>PROFILE</Text>
                     </View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Dropdown')}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                        <View style={{ paddingBottom: 5 }}>
+                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                        </View>
+                        <Text>Dropdown</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     )
 }
 
 export default AminitiesSection
-
