@@ -130,6 +130,6 @@ const styles = StyleSheet.create({
         color: COLORS.primary
     },
     subtitleStyle: {
-        fontFamily: 'nunito'
+        fontFamily: 'nunito',
     },
 })
