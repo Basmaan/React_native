@@ -116,7 +116,9 @@ const Dropdown = () => {
                 {submit && countries.map(country => {
                     return (
                         country.isSelected ?
-                            <Text key={country.id}>{country.name}</Text>
+                            <View key={country.id}>
+                                <Text>{country.name}</Text>
+                            </View>
                             : <View></View>
                     )
                 })}

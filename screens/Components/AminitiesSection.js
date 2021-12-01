@@ -79,7 +79,15 @@ function AminitiesSection({ navigation }) {
                         <View style={{ paddingBottom: 5 }}>
                             <AntDesign name="caretdown" size={24} color={COLORS.primary} />
                         </View>
-                        <Text>Dropdown</Text>
+                        <Text>DROPDOWN</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('UserList')}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                        <View style={{ paddingBottom: 5 }}>
+                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                        </View>
+                        <Text>USERS</Text>
                     </View>
                 </TouchableOpacity>
             </View>
