@@ -90,6 +90,14 @@ function AminitiesSection({ navigation }) {
                         <Text>USERS</Text>
                     </View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('QiyadatLogin')}>
+                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                        <View style={{ paddingBottom: 5 }}>
+                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                        </View>
+                        <Text>QIYADAT</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     )

@@ -7,10 +7,12 @@ import { styles } from '../styles/styles';
 
 const UserList = () => {
 
+
     const [users, setUsers] = useState([])
     const [state, setState] = useState(
-        { username: '' }
+        { username: '', id: null }
     )
+    const [btnText, setBtnText] = useState('Add')
 
     async function deleteUser(id) {
         try {
@@ -33,26 +35,29 @@ const UserList = () => {
     }
 
     async function onAdd() {
-        setState('')
-        console.log(state)
         try {
-            await axios.post("https://jsonplaceholder.typicode.com/users/", state).then((res) => {
-                setUsers((users) => [...users, res.data.username])
-                console.log(res)
+            if (state.id == null || state.id == undefined) {
+                console.log(state.id)
+                await axios.post("https://jsonplaceholder.typicode.com/users/", state).then((res) => {
+                    setUsers((users) => [...users, { username: res.data.username }])
+                }
+                )
             }
-            )
+            else {
+                console.log(state.id)
+                await axios.put(`https://jsonplaceholder.typicode.com/users/${state.id}`, state).then(res => setUsers((users) => [...users]))
+            }
+
         } catch (error) {
             console.error(error);
         }
     }
 
-    // async function onEdit() {
-    //     try {
-    //         await axios.put("https://jsonplaceholder.typicode.com/users/", state).then(res => setUsers((users) => [...users, res]))
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // }
+    async function onEdit(list) {
+        // alert({username:list.username,id: list.id})
+        setState({ username: list.username, id: list.id })
+        setBtnText('Update')
+    }
 
 
     useEffect(() => {
@@ -60,25 +65,23 @@ const UserList = () => {
     }, [])
 
 
-
     return (
-        <View style={{ flex: 1, marginVertical: 20, marginHorizontal: 10 }}>
+        <View style={{ flex: 1, marginVertical: 20, marginHorizontal: 10, }}>
             <StatusBar />
             <ScrollView>
                 <View style={styles.loginInput}>
                     <TextInput
                         style={styles.TextInput}
                         value={state.username || ""}
-                        onChangeText={(text) => setState({ username: text })}
+                        onChangeText={(text) => setState({ ...state, username: text })}
                         placeholder="Name"
                         placeholderTextColor="#003f5c"
                     />
                 </View>
-                <View style={{ marginBottom: 20 }}>
+                <View style={{ marginBottom: 20, }}>
                     <Button
-
                         color={`${COLORS.primary}`}
-                        title="Add"
+                        title={btnText}
                         onPress={onAdd}
                     />
                 </View>
@@ -87,7 +90,7 @@ const UserList = () => {
                         <View key={index} style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: `${COLORS.secondary}`, marginBottom: 10, padding: 10, borderRadius: 10 }}>
                             <Text>{list.username}</Text>
                             <View style={{ flexDirection: 'row' }}>
-                                <Entypo name="edit" size={24} color="black" color={COLORS.primary} />
+                                <Entypo onPress={() => onEdit(list)} name="edit" size={24} color="black" color={COLORS.primary} />
                                 <AntDesign onPress={() => deleteUser(list.id)} name="delete" size={24} color={COLORS.primary} />
                             </View>
                         </View>
