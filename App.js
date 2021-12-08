@@ -20,6 +20,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import ProfileDetailScreen from './screens/ProfileDetailScreen';
 import Dropdown from './screens/Components/Dropdown';
 import UserList from './screens/UserList';
+import QiyadatLogin from './screens/QiyadatLogin';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,9 +49,7 @@ export default function App() {
     return (
       <NavigationContainer theme={Mytheme}>
         <Stack.Navigator>
-          {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} options={{ title: '', headerShown: false }}
-          /> */}
-          {/* <Stack.Screen name="Login" component={LoginScreen} options={{ title: '', headerShown: false }}
+          <Stack.Screen name="Login" component={LoginScreen} options={{ title: '', headerShown: false }}
           />
           <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} options={{ title: '', headerShown: false }} />
@@ -61,8 +60,9 @@ export default function App() {
           <Stack.Screen name="JobSearchScreen" component={JobSearchScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="ProfileDetailScreen" component={ProfileDetailScreen} options={{ title: '', headerShown: false }} />
-          <Stack.Screen name="Dropdown" component={Dropdown} options={{ title: '', headerShown: false }} /> */}
+          <Stack.Screen name="Dropdown" component={Dropdown} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="UserList" component={UserList} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="QiyadatLogin" component={QiyadatLogin} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
