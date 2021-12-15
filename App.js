@@ -21,6 +21,8 @@ import ProfileDetailScreen from './screens/ProfileDetailScreen';
 import Dropdown from './screens/Components/Dropdown';
 import UserList from './screens/UserList';
 import QiyadatLogin from './screens/QiyadatLogin';
+import CustomOnboardingScreen from './screens/CustomOnboardingScreen';
+import CounterScreen from './screens/Components/CounterScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,7 +51,7 @@ export default function App() {
     return (
       <NavigationContainer theme={Mytheme}>
         <Stack.Navigator>
-          <Stack.Screen name="Login" component={LoginScreen} options={{ title: '', headerShown: false }}
+          {/* <Stack.Screen name="Login" component={LoginScreen} options={{ title: '', headerShown: false }}
           />
           <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} options={{ title: '', headerShown: false }} />
@@ -63,6 +65,8 @@ export default function App() {
           <Stack.Screen name="Dropdown" component={Dropdown} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="UserList" component={UserList} options={{ title: '', headerShown: false }} />
           <Stack.Screen name="QiyadatLogin" component={QiyadatLogin} options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="CustomOnboardingScreen" component={CustomOnboardingScreen} options={{ title: '', headerShown: false }} /> */}
+          <Stack.Screen name="CounterScreen" component={CounterScreen} options={{ title: '', headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

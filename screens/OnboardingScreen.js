@@ -30,7 +30,7 @@ export default function OnboardingScreen({ navigation }) {
             image: <Image
                 resizeMode='cover'
                 style={{ width: 400, height: 400 }}
-                source={{ uri: 'https://i.pinimg.com/564x/8c/11/4e/8c114ef2759b895083f4cd2886deb57f.jpg' }} />,
+                source={{ uri: 'https://i.pinimg.com/564x/41/96/6b/41966bc41b18051e80398781bed49f33.jpg' }} />,
             title: 'Get routes',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
