@@ -54,7 +54,7 @@ const UserList = () => {
     }
 
     async function onEdit(list) {
-        // alert({username:list.username,id: list.id})
+        alert({username:list.username,id: list.id})
         setState({ username: list.username, id: list.id })
         setBtnText('Update')
     }

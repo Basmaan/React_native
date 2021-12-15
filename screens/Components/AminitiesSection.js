@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import RadioForm from 'react-native-simple-radio-button';
 import aminities from '../../consts/aminities';
 import COLORS from '../../consts/colors';
@@ -23,7 +23,7 @@ function AminitiesSection({ navigation }) {
 
     return (
 
-        <View style={{ marginTop: 50, paddingHorizontal: 20 }}>
+        <View style={{ marginTop: 50, paddingHorizontal: 20, }}>
             <Text style={{ fontSize: 20, fontFamily: "Nunito_800ExtraBold", marginBottom: 10 }}>Aminities</Text>
             <FlatList
                 horizontal
@@ -49,56 +49,75 @@ function AminitiesSection({ navigation }) {
                 />
             </View>
             <Text style={{ fontSize: 20, fontFamily: "Nunito_800ExtraBold", marginBottom: 10, marginTop: 15 }}>Screens</Text>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-                <TouchableOpacity onPress={() => navigation.navigate('TaskListScreen')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <FontAwesome name="tasks" size={24} color={COLORS.primary} />
+            <ScrollView>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                    <TouchableOpacity onPress={() => navigation.navigate('TaskListScreen')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <FontAwesome name="tasks" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text style={{ fontFamily: 'nunito' }}>TO DO APP</Text>
                         </View>
-                        <Text style={{ fontFamily: 'nunito' }}>TO DO APP</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('JobSearchScreen')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <FontAwesome name="briefcase" size={24} color={COLORS.primary} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('JobSearchScreen')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <FontAwesome name="briefcase" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>JOB APP</Text>
                         </View>
-                        <Text>JOB APP</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('ProfileScreen')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <Entypo name="user" size={24} color={COLORS.primary} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('ProfileScreen')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <Entypo name="user" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>PROFILE</Text>
                         </View>
-                        <Text>PROFILE</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Dropdown')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Dropdown')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>DROPDOWN</Text>
                         </View>
-                        <Text>DROPDOWN</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('UserList')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('UserList')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>USERS</Text>
                         </View>
-                        <Text>USERS</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('QiyadatLogin')}>
-                    <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
-                        <View style={{ paddingBottom: 5 }}>
-                            <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('QiyadatLogin')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>QIYADAT</Text>
                         </View>
-                        <Text>QIYADAT</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('CustomOnboardingScreen')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>Onboard</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('CounterScreen')}>
+                        <View style={{ backgroundColor: COLORS.secondary, height: 100, width: 150, alignItems: 'center', justifyContent: 'center', borderRadius: 15, margin: 10 }}>
+                            <View style={{ paddingBottom: 5 }}>
+                                <AntDesign name="caretdown" size={24} color={COLORS.primary} />
+                            </View>
+                            <Text>Counter</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+
         </View>
     )
 }
