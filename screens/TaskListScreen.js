@@ -36,7 +36,6 @@ const TaskListScreen = () => {
 
             </ScrollView>
             <KeyboardAvoidingView
-                behavior={Platform.OS === "ios" ? "padding" : "height"}
                 style={{ position: 'absolute', bottom: 0, width: '100%', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingHorizontal: 20,backgroundColor:"#fff",paddingTop:10,paddingBottom:10 }}
             >
                 <TextInput

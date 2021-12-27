@@ -10,9 +10,25 @@ const CustomOnboardingScreen = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [viewableItems, setViewableItems] = useState([])
 
-    const onViewableItemsChanged = ({ viewableItems, changed }) => {
-        console.log("Visible items are", viewableItems);
-        console.log("Changed in this iteration", changed);
+    const handleViewableItemsChanged = useRef(({ viewableItems }) => {
+        setViewableItems(viewableItems)
+
+    })
+
+    useEffect(() => {
+        if (!viewableItems[0] || currentPage === viewableItems[0].index)
+            return;
+        setCurrentPage(viewableItems[0].index)
+    }, [viewableItems])
+
+    const handleNext = () => {
+        if (currentPage == data.length - 1)
+            return;
+
+        flatlistRef.current.scrollToIndex({
+            animated: true,
+            index: currentPage + 1
+        })
     }
 
 
@@ -65,7 +81,9 @@ const CustomOnboardingScreen = () => {
                                         width: 10,
                                         height: 10,
                                         borderRadius: 5,
-                                        backgroundColor: COLORS.primary,
+                                        backgroundColor: index == currentPage
+                                            ? COLORS.primary
+                                            : COLORS.primary + '20',
                                         marginRight: 8
                                     }} />
                             ))
@@ -73,6 +91,7 @@ const CustomOnboardingScreen = () => {
                     </View>
 
                     <TouchableOpacity
+                        onPress={handleNext}
                         style={{
                             flexDirection: 'row',
                             alignItems: 'center',
@@ -91,28 +110,6 @@ const CustomOnboardingScreen = () => {
                             style={{ fontSize: 25, color: COLORS.white, marginLeft: -15 }}
                         />
                     </TouchableOpacity>
-
-                    {/* <TouchableOpacity style={{
-                        paddingHorizontal: SIZES.base * 2,
-                        height: 60,
-                        borderRadius: 30,
-                        backgroundColor: COLORS.primary,
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{
-                            color: COLORS.white,
-                            fontSize: 18,
-                            marginLeft: SIZES.base
-                        }}>Get Started</Text>
-                        <AntDesign name="arrowright"
-                            style={{ fontSize: 18, color: COLORS.white, opacity: 0.3, marginLeft: SIZES.base }} />
-                        <AntDesign
-                            name="arrowright"
-                            style={{ fontSize: 25, color: COLORS.white, marginLeft: -15 }}
-                        />
-                    </TouchableOpacity> */}
 
                 </View>
             </SafeAreaView>
@@ -133,7 +130,7 @@ const CustomOnboardingScreen = () => {
                 }}>
                     <ImageBackground
                         source={item.img}
-                        style={{ width: 300, height: 300, resizeMode: 'contains' }}
+                        style={{ width: 150, height: 150, resizeMode: 'cover' }}
                     />
                 </View>
                 <View style={{ paddingHorizontal: SIZES.base * 4, marginVertical: SIZES.base * 4 }}>
@@ -170,13 +167,13 @@ const CustomOnboardingScreen = () => {
             {/* FLATLIST with pages */}
             <FlatList
                 data={data}
-                pagingEnabled={true} 
+                pagingEnabled={true}
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                keyExtractor={item => item._id}
+                keyExtractor={(item, index) => index.toString()}
                 renderItem={renderFlatlistItem}
-                onViewableItemsChanged={onViewableItemsChanged}
-                
+                ref={flatlistRef}
+                onViewableItemsChanged={handleViewableItemsChanged.current}
             />
 
             {renderBottomSection()}
